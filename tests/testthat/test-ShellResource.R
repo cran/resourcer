@@ -33,9 +33,17 @@ test_that("shell resource client commands", {
   res <- .make_shell_resource()
   resolver <- ShellResourceResolver$new()
   client <- resolver$newClient(res)
+  expect_equal(client$getAllowedCommands(), c("plink","ls"))
   expect_equal(client$exec("ls", test = TRUE), "ls")
-  expect_equal(client$exec("plink", params = c("--compress", "--out out.bin"), test = TRUE), "plink --compress --out out.bin")
+  expect_equal(client$exec("plink", params = c("--compress", "--out", "out.bin"), test = TRUE), "plink --compress --out out.bin")
   expect_error(client$exec("cd", "..", test = TRUE), "Shell command not allowed: cd")
+  expect_error(client$exec("ls", "-la .", test = TRUE), "Invalid characters in the parameters")
+  expect_error(client$exec("ls", "-la&ls", test = TRUE), "Invalid characters in the parameters")
+  expect_error(client$exec("ls", "-la|ls", test = TRUE), "Invalid characters in the parameters")
+  expect_error(client$exec("ls", "-la;ls", test = TRUE), "Invalid characters in the parameters")
+  expect_error(client$exec("ls", "-la#ls", test = TRUE), "Invalid characters in the parameters")
+  expect_error(client$exec("ls", "`rm`", test = TRUE), "Invalid characters in the parameters")
+  expect_error(client$exec("ls", "$PATH", test = TRUE), "Invalid characters in the parameters")
 })
 
 test_that("shell resource client unknown command", {
@@ -55,7 +63,7 @@ test_that("shell resource client exec output", {
   res <- client$exec("pwd")
   if (res$status == 0) {
     expect_true(length(res$output)>0)
-    expect_equal(res$output, "/")
+    expect_match(res$output, "^/[a-z]{0,1}$") # case test on windows
     expect_equal(length(res$error), 0)
   }
 })

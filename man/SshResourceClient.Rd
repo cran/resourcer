@@ -4,7 +4,9 @@
 \name{SshResourceClient}
 \alias{SshResourceClient}
 \title{SSH resource client}
-\format{A R6 object of class SshResourceClient}
+\format{
+A R6 object of class SshResourceClient
+}
 \description{
 SSH resource client
 
@@ -20,8 +22,12 @@ Connects to a SSH server.
 \subsection{Public methods}{
 \itemize{
 \item \href{#method-new}{\code{SshResourceClient$new()}}
+\item \href{#method-getAllowedCommands}{\code{SshResourceClient$getAllowedCommands()}}
 \item \href{#method-getConnection}{\code{SshResourceClient$getConnection()}}
 \item \href{#method-downloadFile}{\code{SshResourceClient$downloadFile()}}
+\item \href{#method-uploadFile}{\code{SshResourceClient$uploadFile()}}
+\item \href{#method-tempDir}{\code{SshResourceClient$tempDir()}}
+\item \href{#method-removeTempDir}{\code{SshResourceClient$removeTempDir()}}
 \item \href{#method-exec}{\code{SshResourceClient$exec()}}
 \item \href{#method-close}{\code{SshResourceClient$close()}}
 \item \href{#method-clone}{\code{SshResourceClient$clone()}}
@@ -38,6 +44,7 @@ Connects to a SSH server.
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-new"></a>}}
+\if{latex}{\out{\hypertarget{method-new}{}}}
 \subsection{Method \code{new()}}{
 Create a SshResourceClient instance. This client will interact wtih a computation resource using ssh commands.
 \subsection{Usage}{
@@ -56,7 +63,21 @@ The SshResourceClient object.
 }
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-getAllowedCommands"></a>}}
+\if{latex}{\out{\hypertarget{method-getAllowedCommands}{}}}
+\subsection{Method \code{getAllowedCommands()}}{
+Get the command names that can be executed.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SshResourceClient$getAllowedCommands()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+A character vector
+}
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-getConnection"></a>}}
+\if{latex}{\out{\hypertarget{method-getConnection}{}}}
 \subsection{Method \code{getConnection()}}{
 Get or create the SSH connection object, for raw interaction.
 \subsection{Usage}{
@@ -69,6 +90,7 @@ The SSH connection object.
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-downloadFile"></a>}}
+\if{latex}{\out{\hypertarget{method-downloadFile}{}}}
 \subsection{Method \code{downloadFile()}}{
 Download one or more files (wilcard * is supported in the file name (which can be a directory))
 \subsection{Usage}{
@@ -78,7 +100,7 @@ Download one or more files (wilcard * is supported in the file name (which can b
 \subsection{Arguments}{
 \if{html}{\out{<div class="arguments">}}
 \describe{
-\item{\code{file}}{The file to download.}
+\item{\code{file}}{The file path(s) to download, either absolute or relative to the working directory.}
 
 \item{\code{to}}{The download destination.}
 
@@ -91,7 +113,55 @@ The paths of the files having been downloaded.
 }
 }
 \if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-uploadFile"></a>}}
+\if{latex}{\out{\hypertarget{method-uploadFile}{}}}
+\subsection{Method \code{uploadFile()}}{
+Upload one or more files
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SshResourceClient$uploadFile(file, to = ".", verbose = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{file}}{The file or vector of files to upload.}
+
+\item{\code{to}}{The upload destination, either absolute or relative to working directory.}
+
+\item{\code{verbose}}{If TRUE, details the file operations on the console output.}
+}
+\if{html}{\out{</div>}}
+}
+\subsection{Returns}{
+The paths of the files having been uploaded.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-tempDir"></a>}}
+\if{latex}{\out{\hypertarget{method-tempDir}{}}}
+\subsection{Method \code{tempDir()}}{
+Get connection's temporary directory in the remote server, create it if it does not exists.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SshResourceClient$tempDir()}\if{html}{\out{</div>}}
+}
+
+\subsection{Returns}{
+The path to the temporary directory.
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-removeTempDir"></a>}}
+\if{latex}{\out{\hypertarget{method-removeTempDir}{}}}
+\subsection{Method \code{removeTempDir()}}{
+Remove the connection's temporary directory from the remote server, if it was defined.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{SshResourceClient$removeTempDir()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-exec"></a>}}
+\if{latex}{\out{\hypertarget{method-exec}{}}}
 \subsection{Method \code{exec()}}{
 Executes a ssh command.
 \subsection{Usage}{
@@ -103,7 +173,7 @@ Executes a ssh command.
 \describe{
 \item{\code{command}}{The command name.}
 
-\item{\code{params}}{A named list of parameters.}
+\item{\code{params}}{A character vector of arguments to pass.}
 
 \item{\code{test}}{If TRUE, the command is printed but not executed (for debugging).}
 }
@@ -115,6 +185,7 @@ The command execution result object.
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-close"></a>}}
+\if{latex}{\out{\hypertarget{method-close}{}}}
 \subsection{Method \code{close()}}{
 Close the SSH connection.
 \subsection{Usage}{
@@ -124,6 +195,7 @@ Close the SSH connection.
 }
 \if{html}{\out{<hr>}}
 \if{html}{\out{<a id="method-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-clone}{}}}
 \subsection{Method \code{clone()}}{
 The objects of this class are cloneable with this method.
 \subsection{Usage}{
