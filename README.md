@@ -13,6 +13,16 @@ The main concepts are:
 * _FileResourceGetter_, connect to a file described by a resource,
 * _DBIResourceConnector_, establish a [DBI](https://www.r-dbi.org/) connection.
 
+## Install
+
+### System Dependencies
+
+Known system dependencies on Debian/Ubuntu:
+
+```
+sudo apt-get install libssl-dev libsasl2-dev libssh-dev libmariadbclient-dev libpq-dev
+```
+
 ## File Resources
 
 These are resources describing a file. If the file is in a remote location, it must be downloaded before being read. The data format specification of the resource helps to find the appropriate file reader.
@@ -30,7 +40,7 @@ The file locations supported by default are:
 This can be easily applied to other file locations by extending the _FileResourceGetter_ class. An instance of the new file resource getter is to be registered so that the _FileResourceResolver_ can operate as expected.
 
 ```
-registerFileResourceGetter(MyFileLocationResourceGetter()$new())
+registerFileResourceGetter(MyFileLocationResourceGetter$new())
 ```
 
 ### File Data Format

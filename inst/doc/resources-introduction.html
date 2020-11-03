@@ -15,6 +15,50 @@
 <title>Introduction to Resources</title>
 
 
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+      div.sourceCode { overflow-x: auto; }
+  table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+    margin: 0; padding: 0; vertical-align: baseline; border: none; }
+  table.sourceCode { width: 100%; line-height: 100%; }
+  td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+  td.sourceCode { padding-left: 5px; }
+  code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+  code > span.dt { color: #902000; } /* DataType */
+  code > span.dv { color: #40a070; } /* DecVal */
+  code > span.bn { color: #40a070; } /* BaseN */
+  code > span.fl { color: #40a070; } /* Float */
+  code > span.ch { color: #4070a0; } /* Char */
+  code > span.st { color: #4070a0; } /* String */
+  code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+  code > span.ot { color: #007020; } /* Other */
+  code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+  code > span.fu { color: #06287e; } /* Function */
+  code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+  code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  code > span.cn { color: #880000; } /* Constant */
+  code > span.sc { color: #4070a0; } /* SpecialChar */
+  code > span.vs { color: #4070a0; } /* VerbatimString */
+  code > span.ss { color: #bb6688; } /* SpecialString */
+  code > span.im { } /* Import */
+  code > span.va { color: #19177c; } /* Variable */
+  code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+  code > span.op { color: #666666; } /* Operator */
+  code > span.bu { } /* BuiltIn */
+  code > span.ex { } /* Extension */
+  code > span.pp { color: #bc7a00; } /* Preprocessor */
+  code > span.at { color: #7d9029; } /* Attribute */
+  code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+  code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+  code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+  code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    </style>
+
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
@@ -145,7 +189,7 @@ df &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(res)</cod
 <h2>Database Resources</h2>
 <div id="dbi-connectors" class="section level3">
 <h3>DBI Connectors</h3>
-<p><a href="https://www.r-dbi.org/">DBI</a> is a set of virtual classes that are are used to abstract the SQL database connections and operations within R. Then any DBI implementation can be used to access to a SQL table. Which DBI connector to be used is an information that can be extracted from the scheme part of the resource’s URL. For instance a resource URL starting with <code>postgres://</code> will require the <a href="https://rpostgres.r-dbi.org/">RPostgres</a> driver. To separate the DBI connector instanciation from the DBI interface interactions in the <em>SQLResourceClient</em>, a <em>DBIResourceConnector</em> registry is to be populated. The currently supported SQL database connectors are:</p>
+<p><a href="https://www.r-dbi.org/">DBI</a> is a set of virtual classes that are are used to abstract the SQL database connections and operations within R. Then any DBI implementation can be used to access to a SQL table. Which DBI connector to be used is an information that can be extracted from the scheme part of the resource's URL. For instance a resource URL starting with <code>postgres://</code> will require the <a href="https://rpostgres.r-dbi.org/">RPostgres</a> driver. To separate the DBI connector instanciation from the DBI interface interactions in the <em>SQLResourceClient</em>, a <em>DBIResourceConnector</em> registry is to be populated. The currently supported SQL database connectors are:</p>
 <ul>
 <li><code>mariadb</code> MariaDB connector,</li>
 <li><code>mysql</code> MySQL connector,</li>
@@ -194,7 +238,7 @@ client<span class="op">$</span><span class="kw">close</span>() <span class="co">
 <li>If the resource is a SQL engine having a DBI connector defined, write a new <em>DBIResourceConnector</em> subclass and register an instance of it with the function <code>registerDBIResourceConnector()</code>.</li>
 <li>If the resource is in a domain specific web application or database, write a new <em>ResourceResolver</em> subclass and register an instance of it with the function <code>registerResourceResolver()</code>. This <em>ResourceResolver</em> object will create the appropriate <em>ResourceClient</em> object that matches your needs.</li>
 </ul>
-<p>The design of the URL that will describe your new resource should not overlap an existing one, otherwise the different registries will return the first instance for which the <code>isFor(resource)</code> is <code>TRUE</code>. In order to distinguish resource locations, the URL’s scheme can be extended, for instance the scheme for accessing a file in a Opal server is <code>opal+https</code> so that the credentials be applied as needed by Opal.</p>
+<p>The design of the URL that will describe your new resource should not overlap an existing one, otherwise the different registries will return the first instance for which the <code>isFor(resource)</code> is <code>TRUE</code>. In order to distinguish resource locations, the URL's scheme can be extended, for instance the scheme for accessing a file in a Opal server is <code>opal+https</code> so that the credentials be applied as needed by Opal.</p>
 </div>
 
 
