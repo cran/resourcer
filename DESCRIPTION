@@ -1,7 +1,7 @@
 Package: resourcer
 Type: Package
 Title: Resource Resolver
-Version: 1.2.0
+Version: 1.2.1
 Authors@R: 
     c(person(given = "Yannick",
              family = "Marcon",
@@ -21,13 +21,13 @@ Suggests: testthat, knitr, haven, readr, readxl, ssh, sys, mongolite,
         dplyr, dbplyr, DBI, RMariaDB, RPostgres, sparklyr, RPresto,
         nodbi, rmarkdown
 BugReports: https://github.com/obiba/resourcer
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
 VignetteBuilder: knitr
 Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2022-03-11 17:45:42 UTC; yannick
+Packaged: 2022-08-19 14:45:52 UTC; yannick
 Author: Yannick Marcon [aut, cre] (<https://orcid.org/0000-0003-0138-2023>),
   OBiBa group [cph]
 Maintainer: Yannick Marcon <yannick.marcon@obiba.org>
 Repository: CRAN
-Date/Publication: 2022-03-11 18:00:02 UTC
+Date/Publication: 2022-08-19 15:20:02 UTC
