@@ -1,4 +1,4 @@
-b13abb0a01fc8d89355cfe21ad391adc *DESCRIPTION
+aea01f07d9d1a510617b74626cf78b9f *DESCRIPTION
 0f8af82d56b29b3ea12b44aa5e4ee405 *NAMESPACE
 4eb6a7a097ba38be42fc101be6d60f97 *R/CommandResourceClient.R
 f51595ba4c79854533482769d11b7b8c *R/DBIResourceConnector.R
@@ -12,7 +12,7 @@ e9b4768478abc97820468c4a39962afb *R/NoSQLResourceClient.R
 d630a0b7ec2865a58ac687b9c12c4307 *R/NoSQLResourceResolver.R
 d0d9875167a9bf975b2314fed6447645 *R/OpalFileResourceGetter.R
 7c5d2a53c75317979d0f4ff7f8ba7d18 *R/PostgresResourceConnector.R
-bdebfee93f75d2dd8e0952844d7bedbf *R/PrestoResourceConnector.R
+42fb948bed98c72864e0d5008752da13 *R/PrestoResourceConnector.R
 46b0de3df0ffd7053be8dd2f4dffea78 *R/RDSFileResourceClient.R
 3235d7b81738e4897e7c54577b8a38fb *R/RDSFileResourceResolver.R
 b61e0b0929b51d25091155191e366d01 *R/RDataFileResourceClient.R
@@ -39,7 +39,7 @@ af38df4cc8e600e531b1f52775ef614b *R/resource.R
 aa504be2fe454a1ee0e984aecb30f587 *inst/doc/resources-introduction.R
 1718616a22a8b9e1f25a30166ac6ffdd *inst/doc/resources-introduction.Rmd
 097a1bea26d48a4a5d547a2b0e5d2697 *inst/doc/resources-introduction.html
-f11b635e2d5b708d2ed037d96e9bfcf2 *inst/resources/resource.js
+de49b37bde10aceff932539c895eefa8 *inst/resources/resource.js
 08d9d835e58f29373b1134bcf4dced86 *inst/system/install-system-requirements-ubuntu18.sh
 f024085baa1c8bf8ac5ceaf646101424 *man/CommandResourceClient.Rd
 9f8137695163c93f69ce92f429cfbb8f *man/DBIResourceConnector.Rd
