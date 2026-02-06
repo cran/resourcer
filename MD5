@@ -1,7 +1,7 @@
-c6be544f5d5ae4fca7a3a44fe477c64e *DESCRIPTION
+a6d8dbc7d9898ea4fb81932e62393909 *DESCRIPTION
 0f8af82d56b29b3ea12b44aa5e4ee405 *NAMESPACE
 4eb6a7a097ba38be42fc101be6d60f97 *R/CommandResourceClient.R
-dd4a46efed0748000f83fe0cbb535a8a *R/DBIResourceConnector.R
+aad7a2824528bc5a9a4655ce66401ce9 *R/DBIResourceConnector.R
 464482beb347540301c591479a547316 *R/FileResourceClient.R
 cab3ec02636250a544d71c7ba3ca2504 *R/FileResourceGetter.R
 76b9ebfcb006438a5ae03d3620964b38 *R/GridFsFileResourceGetter.R
@@ -11,7 +11,7 @@ f490400a9500dcab0a7a94f319c19781 *R/HttpFileResourceGetter.R
 e9b4768478abc97820468c4a39962afb *R/NoSQLResourceClient.R
 d630a0b7ec2865a58ac687b9c12c4307 *R/NoSQLResourceResolver.R
 d0d9875167a9bf975b2314fed6447645 *R/OpalFileResourceGetter.R
-a189ac85528b339ae443bf6f8cc85290 *R/PostgresResourceConnector.R
+f8dcdc0cc7c8040b5d3eae900c17bbb7 *R/PostgresResourceConnector.R
 42fb948bed98c72864e0d5008752da13 *R/PrestoResourceConnector.R
 46b0de3df0ffd7053be8dd2f4dffea78 *R/RDSFileResourceClient.R
 3235d7b81738e4897e7c54577b8a38fb *R/RDSFileResourceResolver.R
@@ -33,13 +33,13 @@ a3576136872e8d8000f9dd107f69e3fc *R/as.data.frame.R
 c369d159f1203c3b1c8f80438a713ab2 *R/datashield.R
 af38df4cc8e600e531b1f52775ef614b *R/resource.R
 5c92c3249f4fd9c4b6d5063fe0747f72 *R/zzz.R
-9544ac1af9848da04bbb360673072388 *README.md
-567193920d9c8f290ddd93171317cd6d *build/vignette.rds
+559b2c80fecd02d0b817ee668e54eb6c *README.md
+3635f7cb6421f418a7859f9ebe210522 *build/vignette.rds
 5bcd67b0621b5dc5aab4485db6ada51a *inst/DATASHIELD
-aa504be2fe454a1ee0e984aecb30f587 *inst/doc/resources-introduction.R
-1718616a22a8b9e1f25a30166ac6ffdd *inst/doc/resources-introduction.Rmd
-aea8289753dceefc5117d4d9b9383224 *inst/doc/resources-introduction.html
-a34ba1cdb249ab7e6a66426e1cc97bb7 *inst/resources/resource.js
+b8ee0fa09c93ef16070db6d8ffb07cc9 *inst/doc/resources-introduction.R
+e5b956ff879d38abe873813abecfacd8 *inst/doc/resources-introduction.Rmd
+358ee1ec7ebaf50db72e044a88c70bfe *inst/doc/resources-introduction.html
+87a0238e1fd96d149f362bf2ca088794 *inst/resources/resource.js
 08d9d835e58f29373b1134bcf4dced86 *inst/system/install-system-requirements-ubuntu18.sh
 f024085baa1c8bf8ac5ceaf646101424 *man/CommandResourceClient.Rd
 9f8137695163c93f69ce92f429cfbb8f *man/DBIResourceConnector.Rd
@@ -98,4 +98,4 @@ ac859756bc0763058eaaab4b625d387a *tests/testthat/test-ShellResource.R
 642e0a7d12e0ca662277f68dd124446a *tests/testthat/test-SshResource.R
 adde2390eaf347cefde02852f5032640 *tests/testthat/test-TidyFileResource.R
 4bb5afe2aa4eb8f811d7d90b5f411208 *tests/testthat/test-resource.R
-1718616a22a8b9e1f25a30166ac6ffdd *vignettes/resources-introduction.Rmd
+e5b956ff879d38abe873813abecfacd8 *vignettes/resources-introduction.Rmd

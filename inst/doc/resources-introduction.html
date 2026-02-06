@@ -27,46 +27,32 @@ document.addEventListener('DOMContentLoaded', function(e) {
   }
 });
 </script>
-<script>// Hide empty <a> tag within highlighted CodeBlock for screen reader accessibility (see https://github.com/jgm/pandoc/issues/6352#issuecomment-626106786) -->
-// v0.0.1
-// Written by JooYoung Seo (jooyoung@psu.edu) and Atsushi Yasumoto on June 1st, 2020.
-
-document.addEventListener('DOMContentLoaded', function() {
-  const codeList = document.getElementsByClassName("sourceCode");
-  for (var i = 0; i < codeList.length; i++) {
-    var linkList = codeList[i].getElementsByTagName('a');
-    for (var j = 0; j < linkList.length; j++) {
-      if (linkList[j].innerHTML === "") {
-        linkList[j].setAttribute('aria-hidden', 'true');
-      }
-    }
-  }
-});
-</script>
 
 <style type="text/css">
-  code{white-space: pre-wrap;}
-  span.smallcaps{font-variant: small-caps;}
-  span.underline{text-decoration: underline;}
-  div.column{display: inline-block; vertical-align: top; width: 50%;}
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  ul.task-list{list-style: none;}
-    </style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
 
 
 
 <style type="text/css">
-  code {
-    white-space: pre;
-  }
-  .sourceCode {
-    overflow: visible;
-  }
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
 </style>
 <style type="text/css" data-origin="pandoc">
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
@@ -78,55 +64,54 @@ pre > code.sourceCode { white-space: pre-wrap; }
 pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
-  { counter-reset: source-line 0; }
+{ counter-reset: source-line 0; }
 pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
+{ position: relative; left: -4em; counter-increment: source-line; }
 pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
 div.sourceCode
-  {   }
+{ }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -135,13 +120,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   for (var i = 0; i < sheets.length; i++) {
     if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
     try { var rules = sheets[i].cssRules; } catch (e) { continue; }
-    for (var j = 0; j < rules.length; j++) {
+    var j = 0;
+    while (j < rules.length) {
       var rule = rules[j];
       // check if there is a div.sourceCode rule
-      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -349,18 +341,31 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 
 
-<p>The <code>resourcer</code> package is meant to access resources identified by a URL in a uniform way whether it references a dataset (stored in a file, a SQL table, a MongoDB collection etc.) or a computation unit (system commands, web services etc.). Usually some credentials will be defined, and an additional data format information can be provided to help dataset coercing to a data.frame object.</p>
+<p>The <code>resourcer</code> package is meant to access resources
+identified by a URL in a uniform way whether it references a dataset
+(stored in a file, a SQL table, a MongoDB collection etc.) or a
+computation unit (system commands, web services etc.). Usually some
+credentials will be defined, and an additional data format information
+can be provided to help dataset coercing to a data.frame object.</p>
 <p>The main concepts are:</p>
 <ul>
-<li><em>Resource</em>, access to a resource (dataset or computation unit) is described by an object with URL, optional credentials and optional data format properties,</li>
-<li><em>ResourceResolver</em>, a <em>ResourceClient</em> factory based on the URL scheme and available in a resolvers registry,</li>
-<li><em>ResourceClient</em>, realizes the connection with the dataset or the computation unit described by a <em>Resource</em>,</li>
-<li><em>FileResourceGetter</em>, connect to a file described by a resource,</li>
-<li><em>DBIResourceConnector</em>, establish a <a href="https://www.r-dbi.org/">DBI</a> connection.</li>
+<li><em>Resource</em>, access to a resource (dataset or computation
+unit) is described by an object with URL, optional credentials and
+optional data format properties,</li>
+<li><em>ResourceResolver</em>, a <em>ResourceClient</em> factory based
+on the URL scheme and available in a resolvers registry,</li>
+<li><em>ResourceClient</em>, realizes the connection with the dataset or
+the computation unit described by a <em>Resource</em>,</li>
+<li><em>FileResourceGetter</em>, connect to a file described by a
+resource,</li>
+<li><em>DBIResourceConnector</em>, establish a <a href="https://r-dbi.org/">DBI</a> connection.</li>
 </ul>
 <div id="file-resources" class="section level2">
 <h2>File Resources</h2>
-<p>These are resources describing a file. If the file is in a remote location, it must be downloaded before being read. The data format specification of the resource helps to find the appropriate file reader.</p>
+<p>These are resources describing a file. If the file is in a remote
+location, it must be downloaded before being read. The data format
+specification of the resource helps to find the appropriate file
+reader.</p>
 <div id="file-getter" class="section level3">
 <h3>File Getter</h3>
 <p>The file locations supported by default are:</p>
@@ -369,86 +374,144 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <li><code>http</code>(s), web address, basic authentication,</li>
 <li><code>gridfs</code>, MongoDB file store,</li>
 <li><code>scp</code>, file copy through SSH,</li>
-<li><code>opal</code>, <a href="https://www.obiba.org/pages/products/opal/">Opal</a> file store.</li>
+<li><code>opal</code>, <a href="https://www.obiba.org/pages/products/opal/">Opal</a> file
+store.</li>
 </ul>
-<p>This can be easily applied to other file locations by extending the <em>FileResourceGetter</em> class. An instance of the new file resource getter is to be registered so that the <em>FileResourceResolver</em> can operate as expected.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a>resourcer<span class="op">::</span><span class="kw">registerFileResourceGetter</span>(<span class="kw">MyFileLocationResourceGetter</span>()<span class="op">$</span><span class="kw">new</span>())</span></code></pre></div>
+<p>This can be easily applied to other file locations by extending the
+<em>FileResourceGetter</em> class. An instance of the new file resource
+getter is to be registered so that the <em>FileResourceResolver</em> can
+operate as expected.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>resourcer<span class="sc">::</span><span class="fu">registerFileResourceGetter</span>(<span class="fu">MyFileLocationResourceGetter</span>()<span class="sc">$</span><span class="fu">new</span>())</span></code></pre></div>
 </div>
 <div id="file-data-format" class="section level3">
 <h3>File Data Format</h3>
-<p>The data format specified within the <em>Resource</em> object, helps at finding the appropriate file reader. Currently supported data formats are:</p>
+<p>The data format specified within the <em>Resource</em> object, helps
+at finding the appropriate file reader. Currently supported data formats
+are:</p>
 <ul>
-<li>the data formats that have a reader in <a href="https://www.tidyverse.org/">tidyverse</a>: <a href="https://readr.tidyverse.org/">readr</a> (<code>csv</code>, <code>csv2</code>, <code>tsv</code>, <code>ssv</code>, <code>delim</code>), <a href="https://haven.tidyverse.org/">haven</a> (<code>spss</code>, <code>sav</code>, <code>por</code>, <code>dta</code>, <code>stata</code>, <code>sas</code>, <code>xpt</code>), <a href="https://readxl.tidyverse.org/">readxl</a> (<code>excel</code>, <code>xls</code>, <code>xlsx</code>). This can be easily applied to other data file formats by extending the <em>FileResourceClient</em> class.</li>
-<li>the R data format that can be loaded in a child R environment from which object of interest will be retrieved.</li>
+<li>the data formats that have a reader in <a href="https://tidyverse.org/">tidyverse</a>: <a href="https://readr.tidyverse.org/">readr</a> (<code>csv</code>,
+<code>csv2</code>, <code>tsv</code>, <code>ssv</code>,
+<code>delim</code>), <a href="https://haven.tidyverse.org/">haven</a>
+(<code>spss</code>, <code>sav</code>, <code>por</code>,
+<code>dta</code>, <code>stata</code>, <code>sas</code>,
+<code>xpt</code>), <a href="https://readxl.tidyverse.org/">readxl</a>
+(<code>excel</code>, <code>xls</code>, <code>xlsx</code>). This can be
+easily applied to other data file formats by extending the
+<em>FileResourceClient</em> class.</li>
+<li>the R data format that can be loaded in a child R environment from
+which object of interest will be retrieved.</li>
 </ul>
 <p>Usage example that reads a local SPSS file:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true"></a><span class="co"># make a SPSS file resource</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true"></a>res &lt;-<span class="st"> </span>resourcer<span class="op">::</span><span class="kw">newResource</span>(</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true"></a>  <span class="dt">name =</span> <span class="st">&quot;CNSIM1&quot;</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true"></a>  <span class="dt">url =</span> <span class="st">&quot;file:///data/CNSIM1.sav&quot;</span>,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true"></a>  <span class="dt">format =</span> <span class="st">&quot;spss&quot;</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true"></a>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true"></a><span class="co"># coerce the csv file in the opal server to a data.frame</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true"></a>df &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(res)</span></code></pre></div>
-<p>To support other file data format, extend the <em>FileResourceClient</em> class with the new data format reader implementation. Associate factory class, an extension of the <em>ResourceResolver</em> class is also to be implemented and registered.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true"></a>resourcer<span class="op">::</span><span class="kw">registerResourceResolver</span>(MyFileFormatResourceResolver<span class="op">$</span><span class="kw">new</span>())</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># make a SPSS file resource</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>res <span class="ot">&lt;-</span> resourcer<span class="sc">::</span><span class="fu">newResource</span>(</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;CNSIM1&quot;</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>  <span class="at">url =</span> <span class="st">&quot;file:///data/CNSIM1.sav&quot;</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>  <span class="at">format =</span> <span class="st">&quot;spss&quot;</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>)</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="co"># coerce the csv file in the opal server to a data.frame</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(res)</span></code></pre></div>
+<p>To support other file data format, extend the
+<em>FileResourceClient</em> class with the new data format reader
+implementation. Associate factory class, an extension of the
+<em>ResourceResolver</em> class is also to be implemented and
+registered.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>resourcer<span class="sc">::</span><span class="fu">registerResourceResolver</span>(MyFileFormatResourceResolver<span class="sc">$</span><span class="fu">new</span>())</span></code></pre></div>
 </div>
 </div>
 <div id="database-resources" class="section level2">
 <h2>Database Resources</h2>
 <div id="dbi-connectors" class="section level3">
 <h3>DBI Connectors</h3>
-<p><a href="https://www.r-dbi.org/">DBI</a> is a set of virtual classes that are are used to abstract the SQL database connections and operations within R. Then any DBI implementation can be used to access to a SQL table. Which DBI connector to be used is an information that can be extracted from the scheme part of the resource’s URL. For instance a resource URL starting with <code>postgres://</code> will require the <a href="https://rpostgres.r-dbi.org/">RPostgres</a> driver. To separate the DBI connector instanciation from the DBI interface interactions in the <em>SQLResourceClient</em>, a <em>DBIResourceConnector</em> registry is to be populated. The currently supported SQL database connectors are:</p>
+<p><a href="https://r-dbi.org/">DBI</a> is a set of virtual classes that
+are are used to abstract the SQL database connections and operations
+within R. Then any DBI implementation can be used to access to a SQL
+table. Which DBI connector to be used is an information that can be
+extracted from the scheme part of the resource’s URL. For instance a
+resource URL starting with <code>postgres://</code> will require the <a href="https://rpostgres.r-dbi.org/">RPostgres</a> driver. To separate
+the DBI connector instanciation from the DBI interface interactions in
+the <em>SQLResourceClient</em>, a <em>DBIResourceConnector</em> registry
+is to be populated. The currently supported SQL database connectors
+are:</p>
 <ul>
 <li><code>mariadb</code> MariaDB connector,</li>
 <li><code>mysql</code> MySQL connector,</li>
-<li><code>postgres</code> or <code>postgresql</code> Postgres connector,</li>
-<li><code>presto</code>, <code>presto+http</code> or <code>presto+https</code> <a href="https://prestodb.io/">Presto</a> connector,</li>
-<li><code>spark</code>, <code>spark+http</code> or <code>spark+https</code> <a href="https://spark.apache.org/">Spark</a> connector.</li>
+<li><code>postgres</code> or <code>postgresql</code> Postgres
+connector,</li>
+<li><code>presto</code>, <code>presto+http</code> or
+<code>presto+https</code> <a href="https://prestodb.io/">Presto</a>
+connector,</li>
+<li><code>spark</code>, <code>spark+http</code> or
+<code>spark+https</code> <a href="https://spark.apache.org/">Spark</a>
+connector.</li>
 </ul>
-<p>To support another SQL database having a DBI driver, extend the <em>DBIResourceConnector</em> class and register it:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true"></a>resourcer<span class="op">::</span><span class="kw">registerDBIResourceConnector</span>(MyDBResourceConnector<span class="op">$</span><span class="kw">new</span>())</span></code></pre></div>
+<p>To support another SQL database having a DBI driver, extend the
+<em>DBIResourceConnector</em> class and register it:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>resourcer<span class="sc">::</span><span class="fu">registerDBIResourceConnector</span>(MyDBResourceConnector<span class="sc">$</span><span class="fu">new</span>())</span></code></pre></div>
 </div>
 <div id="use-dplyr" class="section level3">
 <h3>Use dplyr</h3>
-<p>Having the data stored in the database allows to handle large (common SQL databases) to big (PrestoDB, Spark) datasets using <a href="https://dplyr.tidyverse.org/">dplyr</a> which will delegate as much as possible operations to the database.</p>
+<p>Having the data stored in the database allows to handle large (common
+SQL databases) to big (PrestoDB, Spark) datasets using <a href="https://dplyr.tidyverse.org/">dplyr</a> which will delegate as
+much as possible operations to the database.</p>
 </div>
 <div id="document-databases" class="section level3">
 <h3>Document Databases</h3>
-<p>NoSQL databases can be described by a resource. The <a href="https://docs.ropensci.org/nodbi/">nodbi</a> can be used here. Currently only connection to MongoDB database is supported using URL scheme <code>mongodb</code> or <code>mongodb+srv</code>.</p>
+<p>NoSQL databases can be described by a resource. The <a href="https://docs.ropensci.org/nodbi/">nodbi</a> can be used here.
+Currently only connection to MongoDB database is supported using URL
+scheme <code>mongodb</code> or <code>mongodb+srv</code>.</p>
 </div>
 </div>
 <div id="computation-resources" class="section level2">
 <h2>Computation Resources</h2>
-<p>Computation resources are resources on which tasks/commands can be triggerred and from which resulting data can be retrieved.</p>
-<p>Example of computation resource that connects to a server through SSH:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true"></a><span class="co"># make an application resource on a ssh server</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true"></a>res &lt;-<span class="st"> </span>resourcer<span class="op">::</span><span class="kw">newResource</span>(</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true"></a>  <span class="dt">name =</span> <span class="st">&quot;supercomp1&quot;</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true"></a>  <span class="dt">url =</span> <span class="st">&quot;ssh://server1.example.org/work/dir?exec=plink,ls&quot;</span>,</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true"></a>  <span class="dt">identity =</span> <span class="st">&quot;sshaccountid&quot;</span>,</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true"></a>  <span class="dt">secret =</span> <span class="st">&quot;sshaccountpwd&quot;</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true"></a>)</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true"></a><span class="co"># get ssh client from resource object</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true"></a>client &lt;-<span class="st"> </span>resourcer<span class="op">::</span><span class="kw">newResourceClient</span>(res) <span class="co"># does a ssh::ssh_connect()</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true"></a><span class="co"># execute commands</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true"></a>files &lt;-<span class="st"> </span>client<span class="op">$</span><span class="kw">exec</span>(<span class="st">&quot;ls&quot;</span>) <span class="co"># exec &#39;cd /work/dir &amp;&amp; ls&#39;</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true"></a></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true"></a><span class="co"># release connection</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true"></a>client<span class="op">$</span><span class="kw">close</span>() <span class="co"># does ssh::ssh_disconnect(session)</span></span></code></pre></div>
+<p>Computation resources are resources on which tasks/commands can be
+triggerred and from which resulting data can be retrieved.</p>
+<p>Example of computation resource that connects to a server through
+SSH:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="co"># make an application resource on a ssh server</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>res <span class="ot">&lt;-</span> resourcer<span class="sc">::</span><span class="fu">newResource</span>(</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  <span class="at">name =</span> <span class="st">&quot;supercomp1&quot;</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="at">url =</span> <span class="st">&quot;ssh://server1.example.org/work/dir?exec=plink,ls&quot;</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>  <span class="at">identity =</span> <span class="st">&quot;sshaccountid&quot;</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>  <span class="at">secret =</span> <span class="st">&quot;sshaccountpwd&quot;</span></span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>)</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="co"># get ssh client from resource object</span></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>client <span class="ot">&lt;-</span> resourcer<span class="sc">::</span><span class="fu">newResourceClient</span>(res) <span class="co"># does a ssh::ssh_connect()</span></span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a><span class="co"># execute commands</span></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>files <span class="ot">&lt;-</span> client<span class="sc">$</span><span class="fu">exec</span>(<span class="st">&quot;ls&quot;</span>) <span class="co"># exec &#39;cd /work/dir &amp;&amp; ls&#39;</span></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="co"># release connection</span></span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a>client<span class="sc">$</span><span class="fu">close</span>() <span class="co"># does ssh::ssh_disconnect(session)</span></span></code></pre></div>
 </div>
 <div id="extending-resources" class="section level2">
 <h2>Extending Resources</h2>
-<p>There are several ways to extend the Resources handling. These are based on different R6 classes having a <code>isFor(resource)</code> function:</p>
+<p>There are several ways to extend the Resources handling. These are
+based on different R6 classes having a <code>isFor(resource)</code>
+function:</p>
 <ul>
-<li>If the resource is a file located at a place not already handled, write a new <em>FileResourceGetter</em> subclass and register an instance of it with the function <code>registerFileResourceGetter()</code>.</li>
-<li>If the resource is a SQL engine having a DBI connector defined, write a new <em>DBIResourceConnector</em> subclass and register an instance of it with the function <code>registerDBIResourceConnector()</code>.</li>
-<li>If the resource is in a domain specific web application or database, write a new <em>ResourceResolver</em> subclass and register an instance of it with the function <code>registerResourceResolver()</code>. This <em>ResourceResolver</em> object will create the appropriate <em>ResourceClient</em> object that matches your needs.</li>
+<li>If the resource is a file located at a place not already handled,
+write a new <em>FileResourceGetter</em> subclass and register an
+instance of it with the function
+<code>registerFileResourceGetter()</code>.</li>
+<li>If the resource is a SQL engine having a DBI connector defined,
+write a new <em>DBIResourceConnector</em> subclass and register an
+instance of it with the function
+<code>registerDBIResourceConnector()</code>.</li>
+<li>If the resource is in a domain specific web application or database,
+write a new <em>ResourceResolver</em> subclass and register an instance
+of it with the function <code>registerResourceResolver()</code>. This
+<em>ResourceResolver</em> object will create the appropriate
+<em>ResourceClient</em> object that matches your needs.</li>
 </ul>
-<p>The design of the URL that will describe your new resource should not overlap an existing one, otherwise the different registries will return the first instance for which the <code>isFor(resource)</code> is <code>TRUE</code>. In order to distinguish resource locations, the URL’s scheme can be extended, for instance the scheme for accessing a file in a Opal server is <code>opal+https</code> so that the credentials be applied as needed by Opal.</p>
+<p>The design of the URL that will describe your new resource should not
+overlap an existing one, otherwise the different registries will return
+the first instance for which the <code>isFor(resource)</code> is
+<code>TRUE</code>. In order to distinguish resource locations, the URL’s
+scheme can be extended, for instance the scheme for accessing a file in
+a Opal server is <code>opal+https</code> so that the credentials be
+applied as needed by Opal.</p>
 </div>
 
 
