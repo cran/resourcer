@@ -1,4 +1,4 @@
-a6d8dbc7d9898ea4fb81932e62393909 *DESCRIPTION
+f1f013ecfbda39f0bb22aaea5546a84c *DESCRIPTION
 0f8af82d56b29b3ea12b44aa5e4ee405 *NAMESPACE
 4eb6a7a097ba38be42fc101be6d60f97 *R/CommandResourceClient.R
 aad7a2824528bc5a9a4655ce66401ce9 *R/DBIResourceConnector.R
@@ -34,7 +34,7 @@ c369d159f1203c3b1c8f80438a713ab2 *R/datashield.R
 af38df4cc8e600e531b1f52775ef614b *R/resource.R
 5c92c3249f4fd9c4b6d5063fe0747f72 *R/zzz.R
 559b2c80fecd02d0b817ee668e54eb6c *README.md
-3635f7cb6421f418a7859f9ebe210522 *build/vignette.rds
+6aea3b67bf6ee67e51e6c382fdcd9520 *build/vignette.rds
 5bcd67b0621b5dc5aab4485db6ada51a *inst/DATASHIELD
 b8ee0fa09c93ef16070db6d8ffb07cc9 *inst/doc/resources-introduction.R
 e5b956ff879d38abe873813abecfacd8 *inst/doc/resources-introduction.Rmd
@@ -93,9 +93,9 @@ a12ac4f213247b41eb285c20e4aea62a *man/newResource.Rd
 42a65a2239ff21749c0136047e1ed312 *tests/testthat/data/dataset.csv
 4c4bc0b4b39c13b71eaeafc415661a50 *tests/testthat/data/dataset.rds
 aff854fc1815e933fbdc284e085f002d *tests/testthat/data/dataset.sav
-1eb1d88e2290edfee90f328dff6985cb *tests/testthat/test-RDSFileResource.R
-ac859756bc0763058eaaab4b625d387a *tests/testthat/test-ShellResource.R
-642e0a7d12e0ca662277f68dd124446a *tests/testthat/test-SshResource.R
-adde2390eaf347cefde02852f5032640 *tests/testthat/test-TidyFileResource.R
+ba6e99df3e63933470a675971762915e *tests/testthat/test-RDSFileResource.R
+388b4ee571f2b179a19f6904612dca69 *tests/testthat/test-ShellResource.R
+40d07ae8a5ce2bc82395446250fe3f65 *tests/testthat/test-SshResource.R
+bc9d7be21e3a42431037e562f0d85056 *tests/testthat/test-TidyFileResource.R
 4bb5afe2aa4eb8f811d7d90b5f411208 *tests/testthat/test-resource.R
 e5b956ff879d38abe873813abecfacd8 *vignettes/resources-introduction.Rmd
